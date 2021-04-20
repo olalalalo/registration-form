@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/toolbox.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        
+        <section class="modal-wrapper">
+            <div class="column-left">
+                <h1>Rejestacja nowego konta</h1>
+                <!-- p>lorem -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae vitae ea molestias aliquid quaerat alias sunt, recusandae eius ducimus voluptatem quo assumenda maiores, ut sequi harum nemo hic repudiandae repellat!</p>
+            </div>
+
+            <div class="column-right">
+                <h2>Wypełnij pola</h2>
+                <p>* pola wymagane</p>
+
+                <form action="http://localhost/handle-form.php" method="POST">
+
+                    <div class="form-field">
+                        <label class="form-label form-required" for="regform-name">Imię i nazwisko</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control invalid" id="regform-name" type="text" name="regform[name]" required>
+                        </div>
+                        <div class="form-errors">
+                            <div class="form-error">wypełnij pole poprawnie</div>
+                            <div class="form-error">wypełnij pole poprawnie</div>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label form-required" for="regform-email">Email</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control" id="regform-email" type="email" name="regform[email]" required>
+                        </div>
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="regform-phone">Telefon</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control" id="regform-phone" type="tel" name="regform[phone]" placeholder="+XX XXX XXX XXX">
+                        </div>
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label form-required" for="regform-passwd">Hasło</label>
+
+                        <div class="form-control-wrapper">
+                            <input class="form-control" id="regform-passwd" type="password" name="regform[password]" placeholder="Minimum 8 znaków" required minlength="8">
+                        </div>
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label form-required" for="regform-package">Wybierz pakiet</label>
+
+                        <div class="form-control-wrapper">
+                            <select class="form-control" id="regform-package" name="regform[package]" required>
+                                <option></option>
+                                <!-- option[value=v$]{Opcja $}*4 -->
+                                <option value="v1">Opcja 1</option>
+                                <option value="v2">Opcja 2</option>
+                                <option value="v3">Opcja 3</option>
+                                <option value="v4">Opcja 4</option>
+                            </select>
+                        </div>
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <span class="form-label form-required">Czy posiadasz konto?</span>
+
+                        <div class="form-control-wrapper">
+                            <input id="regform-account-type-1" name="regform[accountType]" type="radio" value="premium" required>
+                            <label class="form-label-radio" for="regform-account-type-1">
+                                <span class="form-radio"></span>
+                                <span class="label-text">płatne</span>
+                            </label>
+                            
+                            <input id="regform-account-type-2" name="regform[accountType]" type="radio" value="free">
+                            <label class="form-label-radio" for="regform-account-type-2">
+                                <span class="form-radio"></span>
+                                <span class="label-text">bezpłatne</span>
+                            </label>
+                        </div>
+
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <span class="form-label">Wybierz produkty</span>
+
+                        <div class="form-control-wrapper">
+                            <div class="form-checkbox-field">
+                                <input id="regform-products-1" name="regform[products][]" type="checkbox" value="p1">
+                                <label class="form-label-checkbox" for="regform-products-1">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text">Ochrona danych</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-checkbox-field">
+                                <input id="regform-products-2" name="regform[products][]" type="checkbox" value="p2">
+                                <label class="form-label-checkbox" for="regform-products-2">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text">Kopia bezpieczeństwa</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-checkbox-field">
+                                <input id="regform-products-3" name="regform[products][]" type="checkbox" value="p3">
+
+                                <label class="form-label-checkbox" for="regform-products-3">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text">Regularne aktualizacje</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="regform-comments">Uwagi do zamówienia</label>
+
+                        <div class="form-control-wrapper">
+                            <textarea class="form-control" id="regform-comments" name="regform[comments]"></textarea>
+                        </div>
+
+                        <div class="form-errors"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <span class="form-label">Zgody</span>
+
+                        <div class="form-control-wrapper">
+                            <div class="form-checkbox-field">
+                                <input id="regform-rules" type="checkbox" name="regform[rules]" required>
+                                <label class="form-label-checkbox" for="regform-rules">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text form-required">Zgadzam się z <a href="#">regulaminem serwisu</a></span>
+                                </label>
+                                <div class="form-errors"></div>
+                            </div>
+                            
+                            <div class="form-checkbox-field">
+                                <input id="regform-priv-policy" type="checkbox" name="regform[privPolicy]" required>
+                                <label class="form-label-checkbox" for="regform-priv-policy">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text form-required">Zgadzam się z <a href="#">polityką prywantości</a></span>
+                                </label>
+                                <div class="form-errors"></div>
+                            </div>
+                            
+                            <div class="form-checkbox-field">
+                                <input id="regform-promotions" type="checkbox" name="regform[promotions]">
+                                <label class="form-label-checkbox" for="regform-promotions">
+                                    <span class="form-checkbox"></span>
+                                    <span class="label-text">Wyrażam zgodę na oferty maketingowe</span>
+                                </label>
+                                <div class="form-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-field-submit">
+                        <div class="btn-group">
+                            <button class="btn btn-red" type="reset">Wyczyść</button>
+
+                            <button class="btn" type="submit">Zamawiam</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </body>
+</html>

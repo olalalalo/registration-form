@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+video,
+audio,
+img {
+    max-width: 100%;
+}
+
+select {
+    border:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy41MDYiIGhlaWdodD0iNi43NTMiIHZpZXdCb3g9IjAgMCAxMy41MDYgNi43NTMiPjxwYXRoIGQ9Ik02Ni4zLDExMC43NTNoMEw1OS41NDQsMTA0SDczLjA1TDY2LjMsMTEwLjc1M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01OS41NDQgLTEwNCkiIGZpbGw9IiNkOWQ5ZDkiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-color: transparent;
+}
+
+.table-rwd {
+    overflow-x: auto;
+}
+
+.embed-responsive {
+    position: relative;
+}
+
+.embed-responsive.as-4by3 {
+    padding-bottom: 75%;
+}
+
+.embed-responsive.as-16by9 {
+    padding-bottom: 56.25%;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
